@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "rootDir": "./dist",                                  /* Specify the root folder within your source files. */
+    "outDir": "./dist",
     "target": "es2019",                                  /* https://node.green/#ES2019 Comparar com o servidor que for fazer deploy as funcoes do app para ver se e compativel. */
     "module": "commonjs",                                /* Specify what module code is generated. */
     "esModuleInterop": true,                             /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables `allowSyntheticDefaultImports` for type compatibility. */
