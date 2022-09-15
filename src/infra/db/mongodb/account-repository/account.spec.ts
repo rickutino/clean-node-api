@@ -14,6 +14,13 @@ describe('Account Mongo Repository', () => {
     await MongoHelper.disconnect()
   })
 
+  // This function will clean the database, removing all the data saved in the operations below.
+  // so not affecting the next tests.
+  beforeEach(async () => {
+    const accountCollection = MongoHelper.getCollection('accounts')
+    await accountCollection.deleteMany({})
+  })
+
   test('Should return an account on success', async () => {
     const sut = makeSut()
     const account = await sut.add({
