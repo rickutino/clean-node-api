@@ -7,5 +7,6 @@ module.exports = {
   transform: {
     '.+\\.ts$': 'ts-jest'
   },
-  coverageProvider: 'v8'
+  coverageProvider: 'v8',
+  watchPathIgnorePatterns: ['globalConfig']
 }
