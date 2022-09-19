@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "start": "sucrase-node src/main/server.ts",
+    "check": "npm-check -s -u",
     "test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
     "test:verbose": "jest --passWithNoTests --runInBand",
     "test:unit": "npm test -- --watch -c jest-unit-config.js",
     "test:integration": "npm test -- --watch -c jest-integration-config.js",
     "test:staged": "npm test -- --findRelatedTests",
     "test:ci": "npm test -- --coverage",
-    "prepare": "node -e \"try { require('husky').install() } catch (e) {if (e.code !== 'MODULE_NOT_FOUND') throw e}\""
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
@@ -33,7 +34,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.0.0",
     "git-commit-msg-linter": "^4.1.3",
-    "husky": "^4.3.8",
+    "husky": "^8.0.1",
     "jest": "^28.1.0",
     "lint-staged": "^12.4.2",
     "sucrase": "^3.27.0",
