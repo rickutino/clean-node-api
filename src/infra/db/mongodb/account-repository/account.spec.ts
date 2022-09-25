@@ -17,7 +17,7 @@ describe('Account Mongo Repository', () => {
   // This function will clean the database, removing all the data saved in the operations below.
   // so not affecting the next tests.
   beforeEach(async () => {
-    const accountCollection = MongoHelper.getCollection('accounts')
+    const accountCollection = await MongoHelper.getCollection('accounts')
     await accountCollection.deleteMany({})
   })
 
